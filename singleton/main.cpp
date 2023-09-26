@@ -4,7 +4,7 @@
 
 int main() {
 
-    
+    Singleton::getInstance().log();
 
     return 0;
 }
