@@ -3,7 +3,7 @@
 
 #include "../scroll_widget.hpp"
 
-class SFMLScroll : public ScrollWidget {
+class SFMLScroll : public IScrollWidget {
 public:
     void scroll() override;
 }; // class SFMLScroll

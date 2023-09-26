@@ -3,7 +3,7 @@
 
 #include "../button_widget.hpp"
 
-class QTButton : public ButtonWidget {
+class QTButton : public IButtonWidget {
 public:
     void click() override;
 }; // class QTButton

@@ -6,12 +6,12 @@
 #include "../widgets/button_widget.hpp"
 #include "../widgets/scroll_widget.hpp"
 
-class WidgetFactory {
+class IWidgetFactory {
 public:
-    virtual ButtonWidgetPtr makeButton() = 0;
-    virtual ScrollWidgetPtr makeScroll() = 0;
+    virtual IButtonWidgetPtr makeButton() = 0;
+    virtual IScrollWidgetPtr makeScroll() = 0;
 };
 
-using WidgetFactoryPtr = std::unique_ptr<WidgetFactory>;
+using IWidgetFactoryPtr = std::unique_ptr<IWidgetFactory>;
 
 #endif // DESIGN_PATTERNS_ABSTRACT_FACTORY_WIDGET_FACTORY_HPP

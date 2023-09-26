@@ -3,7 +3,7 @@
 
 #include "../button_widget.hpp"
 
-class SFMLButton : public ButtonWidget {
+class SFMLButton : public IButtonWidget {
 public:
     void click() override;
 }; // class SFMLButton

@@ -3,11 +3,11 @@
 
 #include <memory> // std::unique_ptr
 
-class ButtonWidget {
+class IButtonWidget {
 public:
     virtual void click() = 0; 
 }; // class ButtonWidget
 
-using ButtonWidgetPtr = std::unique_ptr<ButtonWidget>;
+using IButtonWidgetPtr = std::unique_ptr<IButtonWidget>;
 
 #endif // DESIGN_PATTERNS_ABSTRACT_FACTORY_BUTTON_WIDGET_HPP

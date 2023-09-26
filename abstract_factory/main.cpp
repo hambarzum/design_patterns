@@ -4,7 +4,7 @@
 #include "factories/sfml_factory.hpp"
 #include "factories/widget_factory.hpp"
 
-void useWidgets(WidgetFactoryPtr factory) {
+void useWidgets(IWidgetFactoryPtr factory) {
     auto button = factory->makeButton();
     button->click();
 

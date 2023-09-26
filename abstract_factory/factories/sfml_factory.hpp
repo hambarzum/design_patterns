@@ -3,10 +3,10 @@
 
 #include "widget_factory.hpp"
 
-class SFMLFactory : public WidgetFactory {
+class SFMLFactory : public IWidgetFactory {
 public:
-    ButtonWidgetPtr makeButton() override;
-    ScrollWidgetPtr makeScroll() override;
+    IButtonWidgetPtr makeButton() override;
+    IScrollWidgetPtr makeScroll() override;
 }; // class SFMLFactory
 
 #endif // DESIGN_PATTERNS_ABSTRACT_FACTORY_FACTORIES_SFML_FACTORY_HPP

@@ -3,7 +3,7 @@
 
 #include "../scroll_widget.hpp"
 
-class QTScroll : public ScrollWidget {
+class QTScroll : public IScrollWidget {
 public:
     void scroll() override;
 }; // class QTScroll
