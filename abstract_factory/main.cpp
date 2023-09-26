@@ -13,11 +13,10 @@ void useWidgets(IWidgetFactoryPtr factory) {
 }
 
 int main() {
-
-    // UI configured with QT
+    // system configured with QT
     useWidgets(std::make_unique<QTFactory>());
 
-    // UI configured with SFML
+    // system configured with SFML
     useWidgets(std::make_unique<SFMLFactory>());
 
     return 0;
