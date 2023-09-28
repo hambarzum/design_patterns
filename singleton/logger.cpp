@@ -4,7 +4,6 @@
 
 #include "logger.hpp"
 
-Logger* Logger::instance_ = nullptr;
 std::mutex Logger::mutex_;
 
 void Logger::debug(std::string msg) {
@@ -56,12 +55,6 @@ std::string Logger::getTimestamp() {
 }
 
 Logger& Logger::getInstance() {
-    if(!instance_) {
-        std::lock_guard<std::mutex> lock(mutex_);
-        if(!instance_) {
-            instance_ = new Logger;
-        }
-    }
-
-    return *instance_;
+    static Logger instance;
+    return instance;
 }

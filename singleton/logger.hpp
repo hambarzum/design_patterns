@@ -23,7 +23,7 @@ public:
     static void critical(std::string msg);
     static void setPriority(LogPriority);
 
-public:
+private:
     Logger(const Logger&) = delete;
     Logger& operator=(const Logger&) = delete;
 
@@ -34,7 +34,6 @@ private:
     std::string getTimestamp();
 
 private:
-    static Logger* instance_;
     LogPriority priority_ = LogPriority::DEBUG;
     static std::mutex mutex_;
 }; // class Logger
