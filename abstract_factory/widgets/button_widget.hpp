@@ -6,6 +6,7 @@
 class IButtonWidget {
 public:
     virtual void click() = 0; 
+    virtual ~IButtonWidget() = default; 
 }; // class ButtonWidget
 
 using IButtonWidgetPtr = std::unique_ptr<IButtonWidget>;

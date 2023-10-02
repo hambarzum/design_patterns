@@ -6,6 +6,7 @@
 class IScrollWidget {
 public:
     virtual void scroll() = 0;
+    virtual ~IScrollWidget() = default;
 }; // class ScrollWidget
 
 using IScrollWidgetPtr = std::unique_ptr<IScrollWidget>;

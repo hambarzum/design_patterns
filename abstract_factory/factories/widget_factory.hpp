@@ -10,6 +10,7 @@ class IWidgetFactory {
 public:
     virtual IButtonWidgetPtr makeButton() = 0;
     virtual IScrollWidgetPtr makeScroll() = 0;
+    virtual ~IWidgetFactory() = default;
 };
 
 using IWidgetFactoryPtr = std::unique_ptr<IWidgetFactory>;

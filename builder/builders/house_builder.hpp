@@ -15,6 +15,8 @@ public:
     virtual void buildGarden() {}
     
     virtual House& getHouse() = 0;
+
+    virtual ~HouseBuilder() = default;
 }; // class HouseBuilder
 
 using HouseBuilderPtr = std::shared_ptr<HouseBuilder>;
