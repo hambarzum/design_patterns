@@ -4,6 +4,21 @@
 #include "logger.hpp"
 
 int main() {
+
+    std::thread threads[10];
+
+    for(auto& t : threads) {
+        t = std::thread([]() { 
+            Logger::info("logging"); }
+        );
+    }
+
+    
+    for(auto& t : threads) {
+        t.join();
+    }
+
+
     Logger::debug("error log3 logged from the logger");
     Logger::info("info log1 logged from the logger");
     Logger::warn("warning log1 logged from the logger");
@@ -23,20 +38,7 @@ int main() {
     Logger::critical("critical log3 logged from the logger");
 
 
-    /*
-    std::thread threads[10];
 
-    for(auto& t : threads) {
-        t = std::thread([]() { 
-            Logger::info("logging"); }
-        );
-    }
-
-    
-    for(auto& t : threads) {
-        t.join();
-    }
-    */
 
     return 0;
 }
