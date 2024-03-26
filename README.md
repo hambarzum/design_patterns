@@ -1,2 +1,2 @@
 # design_patterns
-Design pattern implemetations and what not.
+GoF Design pattern implemetations in C++.
